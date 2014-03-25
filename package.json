@@ -1,0 +1,29 @@
+{
+  "name": "nyanloader",
+  "author": "Andrea Colaci",
+  "description": "A very cool console Loader with Nyan Cat",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/milkandsour/nyanloader.git"
+  },
+  "main": "./index.js",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "cli-color": ">=0.2.3"
+  },
+  "bugs": {
+    "url": "https://github.com/milkandsour/nyanloader/issues"
+  },
+  "homepage": "https://github.com/milkandsour/nyanloader",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nyan"
+  ],
+  "license": "ISC"
+}
