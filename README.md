@@ -1,4 +1,5 @@
-nyanloader
+nyanloader : Nothing new, just a cool console loader with Nyan Cat.
 ==========
 
-nyanloader
+You're too lazy in spending 10 minutes for your own Nyan Loader?
+Don't worry, I did it!
