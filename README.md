@@ -25,9 +25,11 @@ nyanCat.stop();
 
 Start:
 
+```javascript
 nyanCat.start();
+```
 
 Asd:
 
-<img src="http://imgur.com/3v4W7mk" width="661" height="112" />
+<img src="https://raw.github.com/milkandsour/nyanloader/master/screenshot.png" width="661" height="112" />
 
