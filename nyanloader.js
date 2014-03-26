@@ -11,8 +11,7 @@ var red = clc.xterm(9)
   , vio = clc.xterm(63);
 
 function NyanLoader(){
-    var self = this;
-    self.frames = [
+    this.frames = [
         ' '+red('-')+ora('_')+red('-')+ora('_')+red('-')+ora('_')+red('-')+ora('_')+red('-')+ora('_')+red('-')+ora('_')+red('-')+ora('_')+',------,'+yelB('      o         \n')+
         ' '+gre('_')+yel('-')+gre('_')+yel('-')+gre('_')+yel('-')+gre('_')+yel('-')+gre('_')+yel('-')+gre('_')+yel('-')+gre('_')+yel('-')+'|   /\\_/\\'+yelB('             \n')+
         ' '+blu('-')+vio('_')+blu('-')+vio('_')+blu('-')+vio('_')+blu('-')+vio('_')+blu('-')+vio('_')+blu('-')+vio('_')+blu('-')+'~|__( ^ .^)'+yelB('  +     +     \n')+
@@ -23,18 +22,28 @@ function NyanLoader(){
         ' '+vio('_')+blu('-')+vio('_')+blu('-')+vio('_')+blu('-')+vio('_')+blu('-')+vio('_')+blu('-')+vio('_')+blu('-')+vio('_')+'~|__( o .o)'+yelB('     o        \n')+
         'Loading . . .    \"\"  \"\"            \n'
     ];
-    self.rl = readline.createInterface({
+    this.rl = readline.createInterface({
         input: process.stdin,
         output: process.stdout
     });
-    self.frame = 0;
-    self.animation = setInterval(function () {
-        self.frame&&process.stdout.write(clc.bol(-4));
-        self.rl.write(self.frames[++self.frame%2]);
-    }, 200);
-    return self;
+    this.frame = 0;
+    this.animation = this.start();
+    return this;
 };
+NyanLoader.prototype.start = function(){
+    var self = this;
+    if(!this.animation)
+        this.animation = setInterval(function () {
+            self.frame&&process.stdout.write(clc.bol(-4));
+            self.rl.write(self.frames[++self.frame%2]);
+        }, 200);
+    return this.animation;
+}
 NyanLoader.prototype.stop = function(){
     clearInterval(this.animation);
+    this.animation = null;
+    this.frame = 0;
+    process.stdout.write(clc.bol(-1));
+    this.rl.write("             \n");
 }
 module.exports = new NyanLoader();
