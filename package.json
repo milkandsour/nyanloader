@@ -2,7 +2,7 @@
   "name": "nyanloader",
   "author": "Andrea Colaci",
   "description": "A very cool console Loader with Nyan Cat",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/milkandsour/nyanloader.git"

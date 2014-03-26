@@ -14,7 +14,7 @@ Don't worry, I did it!
 Usage:
 
 ```javascript
-var nyanCat = require('./nyanloader.js');
+var nyanCat = require('nyanloader');
 ```
 
 Stop:
