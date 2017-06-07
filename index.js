@@ -1,1 +1,1 @@
-var nyanCat = require('./nyanloader.js');
+const nyanCat = require('./nyanloader')

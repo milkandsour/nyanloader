@@ -14,22 +14,21 @@ Don't worry, I did it!
 Usage:
 
 ```javascript
-var nyanCat = require('nyanloader');
+const nyanCat = require('nyanloader')
 ```
 
 Stop:
 
 ```javascript
-nyanCat.stop();
+nyanCat.stop()
 ```
 
 Start:
 
 ```javascript
-nyanCat.start();
+nyanCat.start()
 ```
 
 Asd:
 
 <img src="https://raw.github.com/milkandsour/nyanloader/master/screenshot.png" width="661" height="112" />
-
